@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <title>GreenThumb.ai | Homepage</title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- place -->
+</head>
+<body class="loader"> 
+    <!-- preloader -->
+    <div class="preloader">
+        <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader">
+    </div>
+    <!-- preloader -->
+    <!-- Start Header -->
+
+    <!-- navigation -->
+    <header class="menu-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header">
+                        <div class="logo">
+                            <a href="{{ url_for('home') }}">
+                                <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="right-side">
+                            <div class="navigation">
+                                <div class="logo">
+                                    <a href="{{ url_for('home') }}">
+                                        <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo">
+                                    </a>
+                                </div>
+                                <nav>
+                                    <ul class="custom main-menu">
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('cart.ui') }}" class="text-theme fs-14">Cart</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="hamburger-menu">
+                                <div class="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="cta-btn">
+                                <div class="cta-text">
+                                    <a href="{{ url_for('recommendations.ui') }}" class="addlisting-btn btn-first btn-border">Create Garden <span>+</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation -->
+    <!-- End Header -->
+    <!-- Start Banner -->
+    <div class="simple-banner">
+        <div class="main-slider style-2-slider">
+            <div class="slide-item">
+                <img src="{{ url_for('static', filename='assets/images/homepage-1/banner-1920x800.jpg') }}" class="image-fit" alt="slider">
+            </div>
+            <div class="slide-item">
+                <img src="{{ url_for('static', filename='assets/images/homepage-1/banner1-1920x800.jpg') }}" class="image-fit" alt="slider">
+            </div>
+            <div class="slide-item">
+                <img src="{{ url_for('static', filename='assets/images/homepage-1/banner2-1920x800.jpg') }}" class="image-fit" alt="slider">
+            </div>
+            <div class="slide-item">
+                <img src="{{ url_for('static', filename='assets/images/homepage-1/banner3-1920x800.jpg') }}" class="image-fit" alt="slider">
+            </div>
+        </div>
+        <div class="transform-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+						<h1 class="text-custom-white search-title">Create a gardening experience custom to your wants and needs.</h1>
+						<a href="{{ url_for('recommendations.ui') }}" class="btn-first btn-submit">Create a custom garden experience</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Location"></div>
+    <!-- End Banner -->
+    <!-- Intro -->
+    <section class="intro-service-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="intro-widget">
+                            <div class="intro-widget-wrapper">
+                                <div class="intro-widget-block">
+                                    <img src="{{ url_for('static', filename='assets/images/homepage-1/image.png') }}" class="img-fluid" alt="img">
+                                    <div class="intro-widget-content">
+                                        <h4 class="text-theme fw-600">Types of Plants</h4>
+                                        <p class="text-light-white">Our unique tool provides details on planting any type of flowers, herbs, and vegetables.</p>
+                                        <!--<div class="btns">
+                                        <a href="#" class="btn-first btn-submit"><i class="fas fa-chevron-right"></i></a>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="intro-widget-shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="intro-widget">
+                            <div class="intro-widget-wrapper">
+                                <div class="intro-widget-block">
+                                    <img src="{{ url_for('static', filename='assets/images/homepage-1/image1.png') }}" class="img-fluid" alt="img">
+                                    <div class="intro-widget-content">
+                                        <h4 class="text-theme fw-600">Types of Gardens</h4>
+                                        <p class="text-light-white">Our unique tool provides help with container gardens, raised beds as well as small garden plots of 5'x5' of smaller.</p>
+                                        <!--<div class="btns">
+                                        <a href="#" class="btn-first btn-submit"><i class="fas fa-chevron-right"></i></a>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="intro-widget-shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="intro-widget">
+                            <div class="intro-widget-wrapper">
+                                <div class="intro-widget-block">
+                                    <img src="{{ url_for('static', filename='assets/images/homepage-1/image2.png') }}" class="img-fluid" alt="img">
+                                    <div class="intro-widget-content">
+                                        <h4 class="text-theme fw-600">Area Specific</h4>
+                                        <p class="text-light-white">Our tool helps you create a plant design fitted to your area and lighting needs.</p>
+                                        <!--<div class="btns">
+                                        <a href="#" class="btn-first btn-submit"><i class="fas fa-chevron-right"></i></a>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="intro-widget-shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Intro -->
+	
+    <!-- Start satisfy-clients -->
+    <section class="section-padding satisfy-clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="client-box mb-md-40">
+                        <div class="client-box-inner">
+                            <div class="client-content text-center">         
+                                <h3 class="text-custom-blue fw-600 count">{{data['flowering']}}</h3>
+                                <h5 class="text-theme no-margin">Flowering</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="client-box mb-md-40">
+                        <div class="client-box-inner">
+                            <div class="client-content text-center">
+                                <h3 class="text-custom-blue fw-600 count">{{data['herbs']}}</h3>
+                                <h5 class="text-theme no-margin">Herbs</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="client-box mb-xs-40">
+                        <div class="client-box-inner">
+                            <div class="client-content text-center">
+                                <h3 class="text-custom-blue fw-600 count">{{data['vegetables']}}</h3>
+                                <h5 class="text-theme no-margin">Vegetables</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="client-box">
+                        <div class="client-box-inner">
+                            <div class="client-content text-center">
+                                <h3 class="text-custom-blue fw-600 count">{{data['fruiting']}}</h3>
+                                <h5 class="text-theme no-margin">Fruiting</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End satisfy-clients -->
+    <!-- Start Recent Garden -->
+    <section class="masonary-gallery-sec bg-light-white">
+        <div class="container-fluid no-padding">
+            <div class="row magnific-gallery">
+                <div class="col-lg-6">
+                    <div class="full-height masonary-box bg-custom-blue p-relative">
+                        <div class="masonary-text transform-center">
+                            <div class="masonary-text-wrapper">
+                                <div class="icon-box">
+                                    <img src="{{ url_for('static', filename='assets/images/homepage-1/garden5.jpg') }}" class="image-fit" alt="img">
+                                </div>
+                                <div class="text-box">
+                                    <h3 class="text-custom-white">
+                                        Your garden, if you can dream it, we can design and build it!
+                                    </h3>
+                                    <!--<a href="#" class="text-custom-white fs-14"><i class="fab fa-instagram mr-2"></i> @gardenia</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="masonary-item p-relative">
+                        <a href="{{ url_for('static', filename='assets/images/homepage-1/garden.jpg') }}" class="popup">
+                            <img src="{{ url_for('static', filename='assets/images/homepage-1/garden.jpg') }}" class="image-fit" alt="img">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="masonary-item p-relative">
+                        <a href="{{ url_for('static', filename='assets/images/homepage-1/garden1.jpg') }}" class="popup">
+                            <img src="{{ url_for('static', filename='assets/images/homepage-1/garden1.jpg') }}" class="image-fit" alt="img">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="masonary-item p-relative">
+                        <a href="{{ url_for('static', filename='assets/images/homepage-1/garden3.jpg') }}" class="popup">
+                            <img src="{{ url_for('static', filename='assets/images/homepage-1/garden3.jpg') }}" class="image-fit" alt="img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Garden -->
+
+    <!-- Start partners -->
+    <section class="section-padding bg-light-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="swiper-container brands-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-6-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-6-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End partners -->
+    <!-- Start Footer -->
+<footer class="bg-custom-black section-padding footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-md-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Useful Links</h4>
+                    </div>
+                    <ul class="custom links">
+                      <li> <a href="{{ url_for('about') }}" class="text-custom-white">About Us</a> </li>
+                      <li> <a href="{{ url_for('recommendations.ui') }}" class="text-custom-white">Create Garden</a> </li>
+                      <li> <a href="{{ url_for('privacy') }}" class="text-custom-white">Privacy</a> </li>
+                      <li> <a href="{{ url_for('cart.ui') }}" class="text-custom-white">Cart</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-md-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Featured Post</h4>
+                    </div>
+                    <ul class="custom popular_post">
+                        <li>
+                            <div class="post">
+                                <div class="post-wrapper">
+                                    <div class="popular_post_img animate-img">
+                                        <a href="blog-single.html">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-1-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                        </a>
+                                    </div>
+                                    <div class="popular_post_title">
+                                        <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">8 Tips to Help You Finding New Home</a></h6>
+                                        <div class="post-date">
+                                            <p class="text-custom-white no-margin">12 Dec 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post">
+                                <div class="post-wrapper">
+                                    <div class="popular_post_img animate-img">
+                                        <a href="blog-single.html">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-2-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                        </a>
+                                    </div>
+                                    <div class="popular_post_title">
+                                        <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">Bedroom Colors You'll Never Regret</a></h6>
+                                        <div class="post-date">
+                                            <p class="text-custom-white no-margin">09 Dec 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-xs-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Insta Feeds</h4>
+                    </div>
+                    <ul class="custom insta-feed">
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-1-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-2-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-3-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-4-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-5-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-6-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">News Letter</h4>
+                    </div>
+                    <div class="newsletter">
+                        <!--form-->
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-custom" placeholder="Email Id">
+                            </div>
+                            <button class="btn-first btn-submit btn-height" type="submit">Subscribe</button>
+                        <!--/form-->
+                    </div>
+                    <div class="social-media">
+                        <ul class="custom social-media">
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="payment-logo mb-md-20">
+                    <span class="text-custom-white fs-14 mr-3">We are accept</span>
+                    <div class="payemt-icon">
+                        <img src="{{ url_for('static', filename='assets/images/card01.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card02.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card03.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card04.png') }}" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+              <p class="text-custom-white no-margin">© GreenThumbAI 2022 | All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+    <div id="back-top" class="back-top">
+      <a href="#top"><i class="flaticon-arrows"></i></a>
+    </div>
+    <!-- Place all Scripts Here -->
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <!-- Popper -->
+    <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <!-- Range Slider -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+    <!-- Swiper Slider -->
+    <script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script>
+    <!-- Slick Slider -->
+    <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+    <!-- Nice Select -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script>
+    <!-- Jarallex -->
+    <script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script>
+    <!-- magnific popup -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- info box -->
+    <script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script>
+    <!-- Markerclusterer js -->
+    <script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script>
+    <!-- Maps js -->
+    <script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script>
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <!-- /Place all Scripts Here -->
+
+    <script>    
+        let request = new XMLHttpRequest();
+        request.open("GET", "http://ipinfo.io/json", false); 
+        request.send(null);
+        var response = request.responseText
+
+        request.open('POST', `/userinfo`)
+        request.setRequestHeader("Content-Type", "application/json");
+        request.send(response);
+
+        const data = new FormData()
+
+        data.append('location', response)
+        request.open('POST', `/userinfo`)
+        request.send(data)
+
+
+        document.getElementById("Location").innerHTML = ''; //request.responseText;        
+
+    </script>
+
+</body>
+</html>

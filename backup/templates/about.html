@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <title>GreenThumb.ai | About Us</title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- place -->
+</head>
+<body class="loader"> 
+    <!-- preloader -->
+    <div class="preloader">
+        <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader">
+    </div>
+    <!-- preloader -->
+    <!-- navigation -->
+    <header class="menu-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="right-side">
+                            <div class="navigation">
+                                <div class="logo">
+                                    <a href="#">
+                                        <img src="assets/images/logo.png" class="img-fluid image-fit" alt="Logo">
+                                    </a>
+                                </div>
+                                <nav>
+                                    <ul class="custom main-menu">
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="hamburger-menu">
+                                <div class="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="cta-btn">
+                                <div class="cta-text">
+                                    <a href="#" class="addlisting-btn btn-first btn-border">Enquiry <span>+</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation -->
+    <!-- End Header -->
+    <!-- Start Subheader -->
+    <div class="subheader section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-wrapper">
+                        <div class="page-title">
+                            <h1 class="text-theme fw-500">About Us</h1>
+                        </div>
+                        <ul class="custom breadcrumb">
+                            <li>
+                                <a href="{{ url_for('home')}}">Home</a>
+                            </li>
+                            <li class="active">
+                                About Us
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subheader -->
+    <!-- Start About us -->
+    <section class="section-padding about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6 align-self-center mb-md-80">
+                    <div class="about-left-side">
+                        <div class="section-header">
+                            <div class="section-heading">
+                                <h5 class="text-custom-blue">About</h5>
+                                <h3 class="text-theme fw-700">Our Story</h3>
+                            </div>
+                        </div>
+                        <div class="about-desc">
+                            <p class="text-light-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <p class="text-light-white">
+                                On the other hand, we denounce with righteous indignation the foult anuals dislike men who are so beguiled and demoralized by the nuhaiicharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound toen sue; and equal blame belongs to those who fail in their duty.
+                            </p>
+                        </div>
+                        <div class="about-list">
+                            <ul class="custom">
+                                <li class="text-theme fs-14"><span class="fas fa-check"></span> Personalized Service.</li>
+                                <li class="text-theme fs-14"><span class="fas fa-check"></span> 24/7 support.</li>
+                                <li class="text-theme fs-14"><span class="fas fa-check"></span> Financing made easy.</li>
+                                <li class="text-theme fs-14"><span class="fas fa-check"></span> Trusted by thousands.</li>
+                            </ul>
+                        </div>
+                        <a href="{{ url_for('about')}}" class="btn-first btn-submit">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="about-right-side">
+                        <img src="{{ url_for('static', filename='assets/images/about-us/about.jpg') }}" class="img-fluid full-width" alt="about">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About us -->
+    <!-- Start Agent -->
+    <section class="section-padding bg-agents agent-sec">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-heading">
+                    <h5 class="text-custom-blue">Our</h5>
+                    <h3 class="text-custom-white fw-700">Team</h3>
+                </div>
+                <div class="section-description">
+                    <p class="text-custom-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="agent-item mb-md-40">
+                        <div class="agent-img animate-img mb-xl-20">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/kasha.jpg') }}" class="rounded-circle full-width" alt="image">
+                            </a>
+                        </div>
+                        <div class="agent-content">
+                            <h6><a href="#" class="text-theme">Kasha Muzila</a></h6>
+                            <p class="text-light-white">Machine Learning &amp; Data Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="agent-item mb-md-40">
+                        <div class="agent-img animate-img mb-xl-20">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/karl.png') }}" class="rounded-circle full-width" alt="image">
+                            </a>
+                        </div>
+                        <div class="agent-content">
+                            <h6><a href="#" class="text-theme">Karl Eirich</a></h6>
+                            <p class="text-light-white">Data Architecture &amp; Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="agent-item mb-sm-40">
+                        <div class="agent-img animate-img mb-xl-20">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/robert.jpg') }}" class="rounded-circle full-width" alt="image">
+                            </a>
+                        </div>
+                        <div class="agent-content">
+                            <h6><a href="#" class="text-theme">Robert Turnage</a></h6>
+                            <p class="text-light-white">Project Manager &amp; Information Architecture Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="agent-item">
+                        <div class="agent-img animate-img mb-xl-20">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/cynthia.jpg') }}" class="rounded-circle full-width" alt="image">
+                            </a>
+                        </div>
+                        <div class="agent-content">
+                            <h6><a href="#" class="text-theme">Cynthia Zhu</a></h6>
+                            <p class="text-light-white">Data Science & Machine Learning Engineering</p>
+     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Agent -->
+    <!-- Start partners -->
+    <section class="section-padding bg-light-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="swiper-container brands-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-6-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="partner-box">
+                                    <div class="partner-logo animate-img">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-6-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End partners -->
+    <!-- Start Footer -->
+    <footer class="bg-custom-black section-padding footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-md-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Useful Links</h4>
+                        </div>
+                        <ul class="custom links">
+                            <li>
+                                <a href="{{ url_for('about') }}" class="text-custom-white">About Us</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('privacy') }}" class="text-custom-white">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="text-custom-white no-margin">© GreenThumbAI 2022 | All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <div id="back-top" class="back-top">
+      <a href="#top"><i class="flaticon-arrows"></i></a>
+    </div>
+    <!-- Place all Scripts Here -->
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <!-- Popper -->
+    <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <!-- Range Slider -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+    <!-- Swiper Slider -->
+    <script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script>
+    <!-- Slick Slider -->
+    <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+    <!-- Nice Select -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script>
+    <!-- Jarallex -->
+    <script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script>
+    <!-- magnific popup -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- info box -->
+    <script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script>
+    <!-- Markerclusterer js -->
+    <script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script>
+    <!-- Maps js -->
+    <script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script>
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <!-- /Place all Scripts Here -->
+</body>
+</html>

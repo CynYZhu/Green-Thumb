@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="#">
+<meta name="description" content="#">
+<title>GreenThumb.ai | Create Garden</title>
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<!-- Bootstrap -->
+<link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Fontawesome -->
+<link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+<!-- Icon Font -->
+<link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+<!-- Swiper Slider -->
+<link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+<!-- Slick Slider -->
+<link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+<!-- Range Slider -->
+<link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+<!-- magnific popup -->
+<link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+<!-- Nice Select -->
+<link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+<!-- Custom Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+<!-- Form Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/form.css') }}" rel="stylesheet">
+<!-- Custom Responsive -->
+<link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- place -->
+</head>
+<body class="loader">
+<!-- preloader -->
+<div class="preloader"> <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader"> </div>
+<!-- preloader --> 
+<!-- Start Header --> 
+
+<!-- navigation -->
+<header class="menu-style">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="header">
+          <div class="logo"> <a href="{{ url_for('home') }}"> <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> </a> </div>
+          <div class="right-side">
+            <div class="navigation">
+              <div class="logo"> <a href="{{ url_for('home') }}"> <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> </a> </div>
+              <nav>
+                <ul class="custom main-menu">
+                    <li class="menu-item">
+                        <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('cart.ui') }}" class="text-theme fs-14">Cart</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger-menu">
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <div class="cta-btn">
+              <div class="cta-text"> <a href="{{ url_for('recommendations.ui') }}" class="addlisting-btn btn-first btn-border">Recommendations</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- navigation --> 
+<!-- End Header --> 
+<!-- Start Subheader -->
+<div class="subheader section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="breadcrumb-wrapper">
+                  <div class="page-title">
+                      <h1 class="text-theme fw-500">Survey</h1>
+                  </div><!--
+                  <ul class="custom breadcrumb">
+                      <li>
+                        <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                      </li>
+                      <li class="active">Survey</li>
+                    </ul>
+                    
+                  <p class="text-custom-white"> This survey uses an advanced data filtering system that learns from your choices to predict the plants you may like. Once you have submitted results a few times view your recommendations. You can always come back and do more survey's to help the system learn your preferences more.</p>
+                  -->
+                  <div class="cta-btn">
+                    <div class="cta-text"> <a href="{{ url_for('recommendations.ui') }}" class="addlisting-btn btn-first btn-border">Return To Recommendations</a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Subheader -->
+                  <!--SURVEY-->
+                  <div class="container">
+                    <div class="row">     
+                          
+                      <div class="more-search">
+                        <p class="text-custom"><br>
+                          The “Green Thumb” AI recommendation engine fills the missing data gap, called the “cold start” problem, by surveying some plants we have in the database. 
+                          Upon your selections, we summarize and aggregate the variables for each plant in the category of your sentiment for “add to cart,” “thumbs up” or “thumbs down”. 
+                          For “add to cart” we add 2 points, and for “thumbs up” we add 1 point, and lastly for “thumbs down” we subtract 1 point. 
+                          <br><br>                          
+                          Once you have submitted results a few times view your 
+                          <a href="{{ url_for('recommendations.ui') }}" style="text-decoration:underline;">recommendations</a>. 
+                          You can always come back and do more to help the system learn more of your preferences.</p><br>
+                        <!--button class="p-relative btn-first btn-submit full-width" data-toggle="collapse" data-target="#moresearch" type="button"> Survey for Custom Plants for you</button-->
+                        <p></p>
+                        <!--div class="collapse show" id="moresearch"-->                
+
+                          <form method="post" id="frm_survey">  
+                            <div class="container">
+                              <div class="row"> 
+                              <!-- flask template items-->
+                              {% for k,v in samples['body'].items() %}
+                                {% set pic = ('assets/images/plants/' + v['idx'] + '.jpg') %}
+                              <div class="col-sm-2">
+                                <div class="training-grid-box">
+                                  <div class="training-grid-wrapper">
+                                    <div class="training-img animate-img"> 
+                                      <a href="#"> 
+                                        <img src="{{ url_for('static', filename=pic) }}" class="img-fluid" alt="#"> 
+                                      </a>
+                                      <div class="training-save-btn transform-center">
+                                        <ul class="custom">
+                                          <li class="custom-tooltip" data-tip="Add to Cart">
+                                            <label class="action-tools">
+                                              <input name="{{v['idx']}}{{'_cart'}}" type="checkbox">
+                                              <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-cart0.png') }}"> 
+                                              <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-cart0.png') }}"> 
+                                              <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-cart1.png') }}"> 
+                                            </label>
+                                          </li>
+                                          <li class="custom-tooltip" data-tip="Thumbs-Up">
+                                            <label class="action-tools">
+                                              <input name="{{v['idx']}}{{'_up'}}" type="checkbox">
+                                              <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup0.png') }}" alt="thumbs up?"> 
+                                              <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup0.png') }}" alt="thumbs up?"> 
+                                              <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup1.png') }}" alt="thumbs up"> 
+                                            </label>
+                                          </li>
+                                          <li class="custom-tooltip" data-tip="Thumbs-Down">
+                                            <label class="action-tools">
+                                              <input name="{{v['idx']}}{{'_down'}}" type="checkbox">
+                                              <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown0.png') }}" alt="thumbs down?"> 
+                                              <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown0.png') }}" alt="thumbs down?"> 
+                                              <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown1.png') }}" alt="thumbs down"> 
+                                            </label>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>          
+                              {% endfor %}
+                              <!--end flask template items-->   
+                            </div>
+                            </div>     
+                            <div class="row justify-content-end">
+                              <div class="col-lg-3 col-sm-4">
+                                <div class="form-group">
+                                  <button type="submit" name="btn_refresh_survey" class="btn-first btn-submit full-width">Update Results</button>
+                                </div>
+                              </div>
+                              <div class="col-md-1 col-sm-2">
+                                <div class="form-group">
+                                  <button type="submit" name="btn_reset_survey" class="btn-first btn-submit" style="background-color: brown !important;"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<!-- jQuery --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script> 
+<!-- Popper --> 
+<script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script> 
+<!-- Bootstrap --> 
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script> 
+<!-- Range Slider --> 
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script> 
+<!-- Swiper Slider --> 
+<script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script> 
+<!-- Slick Slider --> 
+<script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script> 
+<!-- Nice Select --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script> 
+<!-- Jarallex --> 
+<script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script> 
+<!-- magnific popup --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script> 
+<!-- Maps --> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script> 
+<!-- info box --> 
+<script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script> 
+<!-- Markerclusterer js --> 
+<script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script> 
+<!-- Maps js --> 
+<script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script> 
+<!-- Custom Js --> 
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script> 
+<!-- /Place all Scripts Here -->
+</body>
+</html>

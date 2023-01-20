@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+.col-md-3 {
+    padding: 0;
+    border: 1px solid red;
+  }
+  
+  /* this should come out-of-the box with
+  bootstrap 3 */
+  .img-responsive {
+    width: 100%;
+    hight: auto;
+  }
+
+.action-tools {
+	cursor: pointer;
+  	caret-color: transparent;
+	display: flex;
+   	align-items: center;
+}
+/* Hide the browser's default checkbox */
+.action-tools input {display: none;}
+
+/* Hide the checked checkbox */
+.img-checked {display: none;}
+.img-hover {display: none;}
+.action-tools input:checked ~ .img-checked {display: inline;}
+.action-tools input:checked ~ .img-unchecked {display: none;}
+.action-tools:hover input:not(:checked) ~ .img-hover {display: inline;}
+.action-tools:hover input:not(:checked) ~ .img-checked {display: none;}
+.action-tools:hover input:not(:checked) ~ .img-unchecked {display: none;}
+
+.search-tools {
+	cursor: pointer;
+  	caret-color: transparent;
+	display: flex;
+   	align-items: center;
+}
+/* Hide the browser's default checkbox */
+.search-tools input {display: none;}
+
+/* Hide the checked checkbox */
+.img-checked {display: none;}
+.img-hover {display: none;}
+.search-tools input:checked ~ .img-checked {display: inline;}
+.search-tools input:checked ~ .img-unchecked {display: none;}
+.search-tools:hover input:not(:checked) ~ .img-hover {display: inline;}
+.search-tools:hover input:not(:checked) ~ .img-checked {display: none;}
+.search-tools:hover input:not(:checked) ~ .img-unchecked {display: none;}
+
+
+.training {
+	padding-top: 20px;
+	display: inline-flex;
+}
+img.training{
+	outline: #FFFFFF;
+}
+/*Training Data*/
+.training-grid-box{
+    position: relative;
+}
+.training-grid-box:hover{
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.training-grid-box .training-grid-wrapper{
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+.training-grid-box .training-grid-wrapper .training-img{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-type{
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-address{
+    bottom: 0;
+    padding: 0 10px;
+    z-index: 10;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-address a{
+    color: #fff;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-address a i{
+    margin-right: 5px;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-save-btn{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999;
+}
+.training-grid-box:hover .training-grid-wrapper .training-img .training-save-btn{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s all;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-save-btn ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-save-btn ul li{
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.57);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 2px;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-save-btn ul li a i{
+    color: #ccc;
+    font-size: 16px;
+    line-height: 36px;
+}
+.training-grid-box .training-grid-wrapper .training-img .training-address:after{
+    content: '';
+    display: block;
+    left: 100%;
+    top: 0;
+    border-top: 21px solid transparent;
+    border-left: 21px solid;
+    border-left-color: #483B33;
+}
+.training-grid-box .training-grid-wrapper .training-img>a{
+    display: inline-block;
+}
+.training-grid-box .training-grid-wrapper .training-img>a:after{
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    z-index: 9;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 5%, rgba(22, 22, 23, 0) 40%, rgba(0, 0, 0, 0) 100%);
+    transition: 0.7s;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption{
+    background-color: #fff;
+    border-radius: 3px;
+    padding-bottom: 0;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption h5{
+    font-size: 20px;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .price{
+    display: flex;
+    align-items: center;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .price span{
+    font-size: 80%;
+    margin-left: 4px;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .training-feature {
+    columns: 2;
+    padding-bottom: 10px;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .training-feature li {
+    padding: 0px 0 10px 0;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .training-feature li i {
+    font-size: 18px;
+    margin-right: 5px;
+    color: #4d4d4d;
+}
+.training-grid-box .training-grid-wrapper .training-grid-caption .training-feature li span {
+    font-size: 14px;
+    color: #111111;
+    font-weight: 400;
+}
+.training-grid-box .training-grid-wrapper .training-grid-footer{
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.training-list-view .training-list-wrapper .training-list-content .content-box .training-list-footer .link-btn span,
+.training-grid-box .training-grid-wrapper .training-grid-footer>a span{
+    transition: 0.5s all;
+}
+.training-list-view .training-list-wrapper .training-list-content .content-box .training-list-footer>.link-btn:hover span,
+.training-grid-box .training-grid-wrapper .training-grid-footer>a:hover span{
+    padding-left: 8px;
+    transition: 0.5s all;
+}
+
+/* Test1
+input[type=checkbox] {display:inline-block;
+	height: 50px;
+	width: 50px;}
+ 
+
+input #favorite1 + label::after{
+background-image: url("../images/icons/icon-favorite0.png") no-repeat;
+}
+input #thumbup1[type=checkbox] + label{
+background-image: url("../images/icons/icon-thumbup0.png") no-repeat;
+}
+input #thumbdown1[type=checkbox] + label{
+background-image: url("../images/icons/icon-thumbdown0.png") no-repeat;
+}
+
+input #favorite1:checked + label::after{
+background-image: url("../images/icons/icon-favorite1.png") no-repeat;
+	background:red;
+}
+input #thumbup1[type=checkbox]:checked + label{
+background-image: url("../images/icons/icon-thumbup1.png") no-repeat;
+}
+input #thumbdown1[type=checkbox]:checked + label{
+background-image: url("../images/icons/icon-thumbdown1.png") no-repeat;
+}
+
+*/
+
+
+
+
+
+
+/*
+input#thing1[type=checkbox] + label
+{
+clip-path: circle(46% at 50% 50%);
+background-image: url("https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/32/Thumb-up-icon.png");
+}
+input#thing2[type=checkbox] + label
+{
+background-image: url("https://icons.iconarchive.com/icons/custom-icon-design/flatastic-10/32/Thumb-down-icon.png");
+}
+input#thing3[type=checkbox] + label
+{
+background-image: url("https://icons.iconarchive.com/icons/custom-icon-design/valentine/32/heart-icon.png");
+}
+input#thing4[type=checkbox] + label
+{
+background-image: url("http://lorempixel.com/50/50/sports/");
+}
+input#thing1[type=checkbox] + label, input#thing2[type=checkbox] + label, input#thing3[type=checkbox] + label, input#thing4[type=checkbox] + label, input#thing5[type=checkbox] + label, input#thing6[type=checkbox] + label, input#thing7[type=checkbox] + label, input#thing8[type=checkbox] + label, input#thing9[type=checkbox] + label, input#thing0[type=checkbox] + label
+{
+border-color: white;
+border-style: solid;
+height: 32px;
+width: 32px;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+input#thing1[type=checkbox]:checked + label, input#thing2[type=checkbox]:checked + label, input#thing3[type=checkbox]:checked + label, input#thing4[type=checkbox]:checked + label, input#thing5[type=checkbox]:checked + label, input#thing6[type=checkbox]:checked + label, input#thing7[type=checkbox]:checked + label, input#thing8[type=checkbox]:checked + label, input#thing9[type=checkbox]:checked + label, input#thing0[type=checkbox]:checked + label
+{
+background-color: red;
+border-style: solid;
+height: 32px;
+width: 32px;
+display:inline-block;
+padding: 0 0 0 0px;
+}*/

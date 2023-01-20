@@ -1,0 +1,29 @@
+{
+    "type": {
+        "1": "edible"
+    },
+    "height": {
+        "max": 10,
+        "min": 0
+    },
+    "width": {
+        "max": 10,
+        "min": 0
+    },
+    "smell": {
+        "min": 1
+    },
+    "showy": {
+        "max": 0
+    },
+    "maintenance": {
+        "1": "high"
+    },
+    "zipcode": {
+        "ip": "12345",
+        "zip": "20850"
+    },
+    "month": {
+        "0": 3
+    }
+}

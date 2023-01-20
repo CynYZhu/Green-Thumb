@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="#">
+<meta name="description" content="#">
+<title>GreenThumb.ai | Create Garden</title>
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<!-- Bootstrap -->
+<link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Fontawesome -->
+<link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+<!-- Icon Font -->
+<link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+<!-- Swiper Slider -->
+<link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+<!-- Slick Slider -->
+<link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+<!-- Range Slider -->
+<link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+<!-- magnific popup -->
+<link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+<!-- Nice Select -->
+<link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+<!-- Custom Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+<!-- Form Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/form.css') }}" rel="stylesheet">
+<!-- Custom Responsive -->
+<link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- place -->
+</head>
+<body class="loader">
+<!-- preloader -->
+  <div class="preloader"> <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader"> </div>
+<!-- preloader --> 
+<!-- navigation -->
+<header class="menu-style">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="header">
+          <div class="logo"> <a href="{{ url_for('home') }}"> <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> </a> </div>
+          <div class="right-side">
+            <div class="navigation">
+              <div class="logo"> <a href="{{ url_for('home') }}"> <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> </a> </div>
+              <nav>
+                <ul class="custom main-menu">
+                    <li class="menu-item">
+                        <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('cart.ui') }}" class="text-theme fs-14">Cart</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger-menu">
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <div class="cta-btn">
+              <div class="cta-text"> <a href="{{ url_for('recommendations.ui') }}" class="addlisting-btn btn-first btn-border">Recommendations</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- navigation --> 
+<!-- Start Subheader -->
+<div class="subheader section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="breadcrumb-wrapper">
+                  <div class="page-title">
+                      <h1 class="text-theme fw-500">Shopping Cart</h1>
+                  </div>
+                  <ul class="custom breadcrumb">
+                      <li>
+                        <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                      </li>
+                      <li class="active">
+                        Cart
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Subheader -->
+<!-- Start Shop Left -->
+<section class="section-padding bg-light-white our_articles">
+  <div class="container">
+      <div class="row">
+          <aside class="col-lg-4">
+              <div class="sidebar_wrap mb-md-80">
+                  <div class="sidebar">
+                      <div class="sidebar_widgets mb-xl-30">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Search</h5>
+                          </div>
+                          <form>
+                              <div class="form-group">
+                                  <input type="text" name="#" class="form-control form-control-custom" placeholder="keywords">
+                              </div>
+                              <button type="submit" class="btn-first btn-submit full-width">Search</button>
+                          </form>
+                      </div>
+                      <div class="sidebar_widgets mb-xl-30">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Categories</h5>
+                          </div>
+                          <ul class="custom categories">
+                              <li>
+                                  <a href="#" class="text-theme fs-14">All <span class="text-light-white">(122)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Flowers<span class="text-light-white">(22)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Fruiting<span class="text-light-white">(7)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Herbs<span class="text-light-white">(77)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Vegetables<span class="text-light-white">(77)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Trees<span class="text-light-white">(70)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Shrubs<span class="text-light-white">(17)</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" class="text-theme fs-14">Gardener Education <span class="text-light-white">(80)</span></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="sidebar_widgets mb-xl-30">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Price</h5>
+                          </div>
+                          <div class="property-filter">
+                              <div class="range-slider">
+                                                  <input type="text" id="amount-price" readonly>
+                                                  <input type="text" id="amount1-price" readonly>
+                                              </div>
+                                              <div id="slider-range"></div>
+                          </div>
+                      </div>
+
+                      <div class="sidebar_widgets mb-xl-30">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Brands</h5>
+                          </div>
+                          <div class="property-filter Garden-Categories">
+                             <label class="custom-checkbox">
+                                                      <input type="checkbox" name="#">  <span class="checkmark"></span> Bionic Gloves</label>
+                                                      <label class="custom-checkbox">
+                                                      <input type="checkbox" name="#" checked>  <span class="checkmark"></span> Cobrahead LLC</label>
+                                                      <label class="custom-checkbox">
+                                                      <input type="checkbox" name="#">  <span class="checkmark"></span> Corona</label>
+                                                      <label class="custom-checkbox">
+                                                      <input type="checkbox" name="#">  <span class="checkmark"></span> Fence Armor</label>
+                                                      <label class="custom-checkbox mb-0">
+                                                      <input type="checkbox" name="#">  <span class="checkmark"></span> Fox Gloves</label> 
+                          </div>
+                      </div>
+                      <div class="sidebar_widgets mb-xl-30">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Best Sellers</h5>
+                          </div>
+                          <div class="Garden-Categories">
+                          <ul class="custom popular_post">
+                              <li class="mb-xl-20">
+                                  <div class="post">
+                                      <div class="post-wrapper">
+                                          <div class="popular_post_img animate-img">
+                                              <a href="#">
+                                                  <img src="{{ url_for('static', filename='assets/images/shop/sproduct4.jpg') }}" class="img-fluid image-fit" alt="#">
+                                              </a>
+                                          </div>
+                                          <div class="popular_post_title">
+                                              <h6><a href="#" class="text-custom-black">Stinky Milk Weed</a></h6>
+                                              <span class="date text-custom-blue fw-600 fs-14">
+                                                  <ins>$20.00</ins>
+                                                  <del>$21.90</del>
+                                              </span>
+                                              <span class="product-rating">
+                                                  <i class="fas fa-star"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="mb-xl-20">
+                                  <div class="post">
+                                      <div class="post-wrapper">
+                                          <div class="popular_post_img animate-img">
+                                              <a href="#">
+                                                  <img src="{{ url_for('static', filename='assets/images/shop/sproduct1.jpg') }}" class="img-fluid image-fit" alt="#"> 
+                                              </a>
+                                          </div>
+                                          <div class="popular_post_title">
+                                              <h6><a href="#" class="text-custom-black">Red Rhododendron</a></h6>
+                                              <span class="date text-custom-blue fw-600 fs-14">
+                                                  <ins>$30.00</ins>
+                                                  <del>$35.90</del>
+                                              </span>
+                                              <span class="product-rating">
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="mb-xl-20">
+                                  <div class="post">
+                                      <div class="post-wrapper">
+                                          <div class="popular_post_img animate-img">
+                                              <a href="#">
+                                                  <img src="{{ url_for('static', filename='assets/images/shop/sproduct2.jpg') }}" class="img-fluid image-fit" alt="#">
+                                              </a>
+                                          </div>
+                                          <div class="popular_post_title">
+                                              <h6><a href="#" class="text-custom-black">Green Thumb Fertilizer</a></h6>
+                                              <span class="date text-custom-blue fw-600 fs-14">
+                                                  <ins>$219.00</ins>
+                                                  <del>$270.00</del>
+                                              </span>
+                                              <span class="product-rating">
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="post">
+                                      <div class="post-wrapper">
+                                          <div class="popular_post_img animate-img">
+                                              <a href="#">
+                                                  <img src="{{ url_for('static', filename='assets/images/shop/sproduct3.jpg') }}" class="img-fluid image-fit" alt="#">
+                                              </a>
+                                          </div>
+                                          <div class="popular_post_title">
+                                              <h6><a href="#" class="text-custom-black">Gardening Gloves "King Midas Edition"</a></h6>
+                                              <span class="date text-custom-blue fw-600 fs-14">
+                                                  <ins>$2,000.00</ins>
+                                                  <del>$2,195.00</del>
+                                              </span>
+                                              <span class="product-rating">
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                                  <i class="fas fa-star"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>    
+                          </ul>
+                          </div>
+                      </div>
+                      
+                      <div class="sidebar_widgets">
+                          <div class="widget_title">
+                              <h5 class="no-margin text-theme">Tags</h5>
+                          </div>
+                          <div class="tags">
+                              <a href="#">Tips & Tricks</a>
+                              <a href="#">Flowering Analysis</a>
+                              <a href="#">Fruiting Analysis</a>
+                              <a href="#">Renovation Analysis</a>
+                              <a href="#">Gardening Care Analysis</a>
+                              <a href="#">Garden Layout Engine</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </aside>
+          <div class="col-lg-8">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="listing-top-heading mb-xl-20">
+                      <h6 class="no-margin text-theme">Showing 18 Results</h6>
+                      <div class="sort-by">
+                          <span class="text-custom-black fs-14 fw-600">Sort by</span>
+                          <select class="form-control form-control-custom custom-select">
+                            <option>Relevance</option>
+                            <option>Liked</option>
+                            <option>A to Z</option>
+                            <option>Z to A</option>
+                          </select>
+                      </div>
+                  </div>
+                  </div>
+                <!-- CART -->
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product1.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <!--div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div-->
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Zebra Plant</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$200.00</ins>
+                              <del>$219.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <!-- CART END -->
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product2.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Mo Money Tree!</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$150.00</ins>
+                              <del>$189.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product3.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Aloe Vera</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$250.00</ins>
+                              <del>$299.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product4.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Rubber Tree</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$200.00</ins>
+                              <del>$219.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product5.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Lily</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$150.00</ins>
+                              <del>$189.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product6.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Money Tree</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$250.00</ins>
+                              <del>$299.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product7.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Red Fern</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$200.00</ins>
+                              <del>$219.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product8.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Camellia</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$150.00</ins>
+                              <del>$189.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product9.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Succulent</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$250.00</ins>
+                              <del>$299.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product10.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Succulent</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$200.00</ins>
+                              <del>$219.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product11.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Daily Dew</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$150.00</ins>
+                              <del>$189.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product12.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Ficcus Tree</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$250.00</ins>
+                              <del>$299.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product13.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Ficcuss Tree</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$200.00</ins>
+                              <del>$219.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product14.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">X-mas Tree 2099</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$150.00</ins>
+                              <del>$189.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="product-item mb-xl-20">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/shop/product15.jpg') }}" class="img-fluid" alt="img">
+                            </a>
+                            <div class="hover-icons">
+                              <a href="#">
+                                  <small>
+                                      Add To Cart
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-shopping-cart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Whishlist
+                                  </small>
+                                  <span>
+                                      <i class="far fa-heart"></i>
+                                  </span>
+                              </a>
+                              <a href="#">
+                                  <small>
+                                      Compare
+                                  </small>
+                                  <span>
+                                      <i class="fas fa-exchange-alt"></i>
+                                  </span>
+                              </a>   
+                            </div>
+                        </div> 
+                        <div class="product-content">
+                           <div class="product-rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                           <h4>
+                               <a href="#">Succuelent</a>
+                           </h4>
+                           <span class="text-custom-blue fw-600 fs-14">
+                              <ins>$250.00</ins>
+                              <del>$299.00</del>
+                           </span> 
+                        </div>
+                     </div>
+                 </div>
+                 
+                 
+                 
+              </div>
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="section-padding-top">
+                          <ul class="custom pagination justify-content-center">
+                              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End Shop Left -->
+<!-- Start partners -->
+<section class="section-padding">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12">
+              <div class="swiper-container brands-slider">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-4-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-5-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-6-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-3-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-2-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <div class="partner-box">
+                              <div class="partner-logo animate-img">
+                                  <a href="#">
+                                      <img src="{{ url_for('static', filename='assets/images/homepage-1/partner-1-120x120.jpg') }}" class="img-fluid" alt="partners">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End partners -->
+<!-- Start Footer -->
+<footer class="bg-custom-black section-padding footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-md-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Useful Links</h4>
+                  </div>
+                  <ul class="custom links">
+                    <li> <a href="{{ url_for('about') }}" class="text-custom-white">About Us</a> </li>
+                    <li> <a href="{{ url_for('recommendations.ui') }}" class="text-custom-white">Create Garden</a> </li>
+                    <li> <a href="{{ url_for('privacy') }}" class="text-custom-white">Privacy</a> </li>
+                    <li> <a href="{{ url_for('cart.ui') }}" class="text-custom-white">Cart</a> </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-md-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Featured Post</h4>
+                  </div>
+                  <ul class="custom popular_post">
+                      <li>
+                          <div class="post">
+                              <div class="post-wrapper">
+                                  <div class="popular_post_img animate-img">
+                                      <a href="blog-single.html">
+                                          <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-1-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                      </a>
+                                  </div>
+                                  <div class="popular_post_title">
+                                      <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">8 Tips to Help You Finding New Home</a></h6>
+                                      <div class="post-date">
+                                          <p class="text-custom-white no-margin">12 Dec 2022</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="post">
+                              <div class="post-wrapper">
+                                  <div class="popular_post_img animate-img">
+                                      <a href="blog-single.html">
+                                          <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-2-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                      </a>
+                                  </div>
+                                  <div class="popular_post_title">
+                                      <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">Bedroom Colors You'll Never Regret</a></h6>
+                                      <div class="post-date">
+                                          <p class="text-custom-white no-margin">09 Dec 2022</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-xs-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Insta Feeds</h4>
+                  </div>
+                  <ul class="custom insta-feed">
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-1-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-2-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-3-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-4-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-5-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-6-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">News Letter</h4>
+                  </div>
+                  <div class="newsletter">
+                      <!--form-->
+                          <div class="form-group">
+                              <input type="email" class="form-control form-control-custom" placeholder="Email Id">
+                          </div>
+                          <button class="btn-first btn-submit btn-height" type="submit">Subscribe</button>
+                      <!--/form-->
+                  </div>
+                  <div class="social-media">
+                      <ul class="custom social-media">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<div class="copyright">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="payment-logo mb-md-20">
+                  <span class="text-custom-white fs-14 mr-3">We are accept</span>
+                  <div class="payemt-icon">
+                      <img src="{{ url_for('static', filename='assets/images/card01.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card02.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card03.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card04.png') }}" alt="#">
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-custom-white no-margin">© GreenThumbAI 2022 | All Right Reserved.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Footer -->
+<div id="back-top" class="back-top"> <a href="#top"><i class="flaticon-arrows"></i></a> </div>
+<!-- Place all Scripts Here --> 
+
+<!-- jQuery --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script> 
+<!-- Popper --> 
+<script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script> 
+<!-- Bootstrap --> 
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script> 
+<!-- Range Slider --> 
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script> 
+<!-- Swiper Slider --> 
+<script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script> 
+<!-- Slick Slider --> 
+<script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script> 
+<!-- Nice Select --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script> 
+<!-- Jarallex --> 
+<script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script> 
+<!-- magnific popup --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script> 
+<!-- Maps --> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script> 
+<!-- info box --> 
+<script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script> 
+<!-- Markerclusterer js --> 
+<script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script> 
+<!-- Maps js --> 
+<script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script> 
+<!-- Custom Js --> 
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script> 
+<!-- /Place all Scripts Here -->
+</body>
+</html>

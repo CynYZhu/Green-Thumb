@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="#">
+    <meta name="description" content="#">
+    <title>GreenThumb.ai | Privacy</title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- place -->
+</head>
+<body class="loader"> 
+    <!-- preloader -->
+    <div class="preloader">
+        <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader">
+    </div>
+    <!-- preloader -->
+    <!-- navigation -->
+    <header class="menu-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header">
+                        <div class="logo">
+                            <a href="{{ url_for('home') }}">
+                                <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="right-side">
+                            <div class="navigation">
+                                <div class="logo">
+                                    <a href="{{ url_for('home') }}">
+                                        <img src="{{ url_for('static', filename='assets/images/logo.png')}}" class="img-fluid image-fit" alt="Logo">
+                                    </a>
+                                </div>
+                                <nav>
+                                    <ul class="custom main-menu">
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="{{ url_for('cart.ui') }}" class="text-theme fs-14">Cart</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="hamburger-menu">
+                                <div class="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="cta-btn">
+                                <div class="cta-text">
+                                    <a href="{{ url_for('recommendations.ui') }}" class="addlisting-btn btn-first btn-border">Recommendations</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation -->
+    <!-- End Header -->
+    <!-- Start Subheader -->
+    <div class="subheader section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-wrapper">
+                        <div class="page-title">
+                            <h1 class="text-theme fw-500">Privacy</h1>
+                        </div>
+                        <ul class="custom breadcrumb">
+                            <li>
+                                <a href="{{ url_for('home') }}">Home</a>
+                            </li>
+                            <li class="active">
+                                Privacy
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-custom-white">...We respect the right to be forgotten! <br> Press the button below to remove all information from the site</p>
+                    <div class="cta-btn">
+                      <div class="cta-text"> <a href="{{ url_for('delete_session_data') }}" class="addlisting-btn btn-first btn-border" style="background-color: brown !important;">Delete Session Data</a> </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subheader -->
+    <!-- Start Contact form -->
+    <section class="section-padding privacy">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6 align-self-center mb-md-80">
+                    <div class="about-left-side">
+                        <div class="section-header">
+                            <div class="section-heading">
+                                <h5 class="text-custom-blue">Privacy</h5>
+                                <h3 class="text-theme fw-700">How We Handle Data</h3>
+                            </div>
+                        </div>
+                        <div class="about-desc">
+                            <p>Green Thumb AI is committed to protecting the privacy and accuracy of confidential information to the extent possible, subject to provisions of state and federal law. Other than as required by laws that guarantee public access to certain types of information, or in response to subpoenas or other legal instruments that authorize access, personal information is not actively shared. In particular, we do not re-distribute or sell personal information collected on our web servers.</p>
+                            <h5 class="text-custom-blue">Green Thumb AI servers collect the following analytics:</h5>
+                            <div class="about-list">
+                                <ul class="custom">
+                                    <li class="text-theme fs-14"><span class="fas fa-check"></span> Date</li>
+                                    <li class="text-theme fs-14"><span class="fas fa-check"></span> Zip code</li>
+                                    <li class="text-theme fs-14"><span class="fas fa-check"></span> User's preferences</li>
+                                    <li class="text-theme fs-14"><span class="fas fa-check"></span> Internet Protocol (IP) address of computer being used</li>
+                                </ul>
+                            </div>
+                            <p>Green Thumb AI does not associate this data to individual user identities. Tracking only starts when the user clicks the Create Garden Experience on the Green Thumb AI site.</p>
+                            <h5 class="text-custom-blue">You have the right to be forgotten</h5>
+                            <p>Green Thumb AI gives its users the ability to delete their session and all the data that the website collected to help give plant recommendations. This wipes the users record of ever visiting the website. Users will have to restart their plant suggestions when revisiting Green Thumb AI site.</p>
+                            <p>Green Thumb AI gives its users the ability to delete only their survey data collected to help give plant recommendations. This gives the user the ability to start over with their plant recommendations. Users will have to restart their plant suggestions if they would like Green Thumb AI to give plant recommendations.</p>
+                            <h5 class="text-custom-blue">Cookies</h5>
+                            <p>Green Thumb AI site may use "cookies" to deliver web content specific to individual users' interests or to keep track of online purchasing transactions. Sensitive personal information is not stored within cookies.</p>
+                            <h5 class="text-custom-blue">Use of collected information</h5>
+                            <p>Green Thumb AI will only use plant preference information collected from this site for the purpose of providing accurate plant recommendations for that user’s session.</p>
+                            <p>Green Thumb AI uses browser-IP-address information and anonymous-browser history to auto populate zip code and current date. This information is used to improve plant recommendations and Web utilization. IP address information may also be used for troubleshooting purposes.</p>
+                            <h5 class="text-custom-blue">Distribution of collected information</h5>
+                            <p>Green Thumb AI will not disclose, without your consent, personal information collected about you, except for certain explicit circumstances in which disclosure is required by law.</p>
+                            <p>Green Thumb AI will not distribute or sell personal information to third-party organizations.</p>
+                            <h5 class="text-custom-blue">Privacy Statement Revisions</h5>
+                            <p>This Privacy Statement was last revised on 11/22/2022. We may change this Privacy Statement at any time and for any reason. We encourage you to review this Privacy Statement each time you visit the web site.</p>
+                            <p>If we make a significant change to our Privacy Statement, we will post a notice on the homepage of our web site for a period of time after the change is made. </p>
+
+                        </div>
+                        <!--<a href="about.html" class="btn-first btn-submit">Read More</a>-->
+                    </div>
+                </div>
+                <!--div class="col-xl-5 col-lg-6">
+                    <div class="about-right-side">
+                        <img src="{{ url_for('static', filename='assets/images/about-us/privacy.jpg')}}" class="img-fluid full-width" alt="about">
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </section>
+    <!-- End Contact form -->
+    <!-- Start Footer -->
+<footer class="bg-custom-black section-padding footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-md-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Useful Links</h4>
+                    </div>
+                    <ul class="custom links">
+                      <li> <a href="{{ url_for('about') }}" class="text-custom-white">About Us</a> </li>
+                      <li> <a href="{{ url_for('recommendations.ui') }}" class="text-custom-white">Create Garden</a> </li>
+                      <li> <a href="{{ url_for('privacy') }}" class="text-custom-white">Privacy</a> </li>
+                      <li> <a href="{{ url_for('cart.ui') }}" class="text-custom-white">Cart</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-md-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Featured Post</h4>
+                    </div>
+                    <ul class="custom popular_post">
+                        <li>
+                            <div class="post">
+                                <div class="post-wrapper">
+                                    <div class="popular_post_img animate-img">
+                                        <a href="blog-single.html">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-1-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                        </a>
+                                    </div>
+                                    <div class="popular_post_title">
+                                        <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">8 Tips to Help You Finding New Home</a></h6>
+                                        <div class="post-date">
+                                            <p class="text-custom-white no-margin">12 Dec 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post">
+                                <div class="post-wrapper">
+                                    <div class="popular_post_img animate-img">
+                                        <a href="blog-single.html">
+                                            <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-2-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                        </a>
+                                    </div>
+                                    <div class="popular_post_title">
+                                        <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">Bedroom Colors You'll Never Regret</a></h6>
+                                        <div class="post-date">
+                                            <p class="text-custom-white no-margin">09 Dec 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box mb-xs-80">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">Insta Feeds</h4>
+                    </div>
+                    <ul class="custom insta-feed">
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-1-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-2-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-3-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-4-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-5-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                        <li class="insta-item animate-img">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-6-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-box">
+                    <div class="footer-heading">
+                        <h4 class="text-custom-white no-margin">News Letter</h4>
+                    </div>
+                    <div class="newsletter">
+                        <!--form-->
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-custom" placeholder="Email Id">
+                            </div>
+                            <button class="btn-first btn-submit btn-height" type="submit">Subscribe</button>
+                        <!--/form-->
+                    </div>
+                    <div class="social-media">
+                        <ul class="custom social-media">
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="payment-logo mb-md-20">
+                    <span class="text-custom-white fs-14 mr-3">We are accept</span>
+                    <div class="payemt-icon">
+                        <img src="{{ url_for('static', filename='assets/images/card01.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card02.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card03.png') }}" alt="#">
+                        <img src="{{ url_for('static', filename='assets/images/card04.png') }}" alt="#">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+              <p class="text-custom-white no-margin">© GreenThumbAI 2022 | All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+    <!-- End Footer -->
+    <div id="back-top" class="back-top">
+      <a href="#top"><i class="flaticon-arrows"></i></a>
+    </div>
+    <!-- Place all Scripts Here -->
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <!-- Popper -->
+    <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <!-- Range Slider -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script>
+    <!-- Swiper Slider -->
+    <script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script>
+    <!-- Slick Slider -->
+    <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+    <!-- Nice Select -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script>
+    <!-- Jarallex -->
+    <script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script>
+    <!-- magnific popup -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- info box -->
+    <script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script>
+    <!-- Markerclusterer js -->
+    <script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script>
+    <!-- Maps js -->
+    <script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script>
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <!-- /Place all Scripts Here -->
+</body>
+</html>

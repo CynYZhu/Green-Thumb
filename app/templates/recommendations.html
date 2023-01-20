@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="#">
+<meta name="description" content="#">
+<title>GreenThumb.ai | Create Garden</title>
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+<!-- Bootstrap -->
+<link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Fontawesome -->
+<link href="{{ url_for('static', filename='assets/css/font-awesome.css') }}" rel="stylesheet">
+<!-- Icon Font -->
+<link href="{{ url_for('static', filename='assets/css/font/flaticon.css') }}" rel="stylesheet">
+<!-- Swiper Slider -->
+<link href="{{ url_for('static', filename='assets/css/swiper.min.css') }}" rel="stylesheet">
+<!-- Slick Slider -->
+<link href="{{ url_for('static', filename='assets/css/slick.css') }}" rel="stylesheet">
+<!-- Range Slider -->
+<link href="{{ url_for('static', filename='assets/css/jquery-ui.css') }}" rel="stylesheet">
+<!-- magnific popup -->
+<link href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}" rel="stylesheet">
+<!-- Nice Select -->
+<link href="{{ url_for('static', filename='assets/css/nice-select.css') }}" rel="stylesheet">
+<!-- Custom Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+<!-- Form Stylesheet -->
+<link href="{{ url_for('static', filename='assets/css/form.css') }}" rel="stylesheet">
+<!-- Custom Responsive -->
+<link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- Head scripts 
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+  <style>
+    .ui-datepicker {
+      width: 310px;
+    }
+    .ui-datepicker table {
+      background: white;
+    }
+    .ui-datepicker-header{
+      color: #fff;
+      background: #6bb00b !important; 
+    }
+    .ui-datepicker-prev{
+      color: #fff;
+      background: #749743 !important; 
+    }
+    .ui-datepicker-next{
+      color: #fff;
+      background: #749743 !important; 
+    }
+    .invasive_species{
+      color: darkred;
+      font-style: italic;
+      font-size: 12px;
+      line-height: 1.8;
+      font-family: 'Poppins', sans-serif;;
+    }
+  </style>
+
+
+</head>
+<body class="loader">
+  <!-- preloader -->
+  <div class="preloader">
+      <img src="{{ url_for('static', filename='assets/images/tree.svg') }}" alt="preloader">
+  </div>
+  <!-- preloader -->
+  <!-- navigation -->
+  <header class="menu-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header">
+            <div class="logo"> 
+              <a href="{{ url_for('home') }}" class="text-theme fs-14">
+                <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> 
+              </a> 
+            </div>
+            <div class="right-side">
+              <div class="navigation">                
+                <div class="logo"> 
+                  <a href="{{ url_for('home') }}" class="text-theme fs-14">
+                    <img src="{{ url_for('static', filename='assets/images/logo.png') }}" class="img-fluid image-fit" alt="Logo"> 
+                  </a> 
+                </div>
+                <nav>
+                  <ul class="custom main-menu">
+                      <li class="menu-item">
+                          <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                      </li>
+                      <li class="menu-item">
+                          <a href="{{ url_for('about') }}" class="text-theme fs-14">About Us</a>
+                      </li>
+                      <li class="menu-item">
+                          <a href="{{ url_for('privacy') }}" class="text-theme fs-14">Privacy</a>
+                      </li>
+                      <li class="menu-item">
+                          <a href="{{ url_for('cart.ui') }}" class="text-theme fs-14">Cart</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="hamburger-menu">
+              <div class="menu-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+              <div class="cta-btn">
+                <div class="cta-text"> <a href="{{ url_for('survey.ui') }}" class="addlisting-btn btn-first btn-border">Survey</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- navigation END --> 
+<!-- Start Subheader -->
+<div class="subheader section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="breadcrumb-wrapper">
+                  <div class="page-title">
+                      <h1 class="text-theme fw-500">Recommendations</h1>
+                  </div>
+                  <ul class="custom breadcrumb">
+                      <li>
+                        <a href="{{ url_for('home') }}" class="text-theme fs-14">Home</a>
+                      </li>
+                      <li class="active">
+                        Recommendations
+                      </li>
+                    </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Subheader -->
+
+  <!-- FILTERS -->
+  <section class="section-padding bg-light-white">
+    <div class="container">
+      {% if values['RECOMMENDATIONS']['head']['survey']['Summary'] != {} %}     
+      <div class="row">
+        <aside class="col-lg-4">
+          <div class="sidebar_wrap mb-md-80">
+            <div class="sidebar">
+              <div class="sidebar_widgets">
+                <div class="widget_title">
+                  <h5 class="no-margin text-theme">Filter</h5>
+                </div>
+                <div class="property-filter">
+                  <form method="post" name="frm_filter" id="frm_filter">
+                    <div class="row">
+                      <!-- Survey -->
+                        <div class="col-12">
+                          <div class="form-group">
+                            <div class="cta-btn">
+                              <div class="p-relative btn-first btn-submit full-width"> <a href="{{ url_for('survey.ui') }}" class="addlisting-btn btn-first">Survey</a> </div>
+                            </div>
+                            <br>
+                            <label class="text-theme fs-16 fw-600">Your Selections</label>
+                            <br>
+                            <select name="selected" class="form-control form-control-custom custom-select">                            
+                            {% for k,v in values['RECOMMENDATIONS']['head']['survey']['Summary'].items() %}
+                              {% if k != 'down' %}
+                              {% for k2, v2 in v['items'].items() %}
+                                  {% if k2 == values['SELECTIONS']['selected'] %}                                
+                                    <option value="{{ k2 }}">{{ v2 }}</option>
+                                  {% endif %}                                    
+                                {% endfor %}
+                              {% endif %}
+                            {% endfor %}
+                            {% for k,v in values['RECOMMENDATIONS']['head']['survey']['Summary'].items() %}
+                              {% if k != 'down' %}      
+                                {% for k2, v2 in v['items'].items() %}
+                                  {% if k2 != values['SELECTIONS']['selected'] %}                               
+                                    <option value="{{ k2 }}">{{ v2 }}</option>
+                                  {% endif %}                                    
+                                {% endfor %}
+                              {% endif %}
+                            {% endfor %}
+                          </select>
+                          </div>
+                        </div>
+                        <!-- Survey End -->
+                        {% if values['SELECTIONS']['selected'] != '' %}
+                          {% set pic = ('assets/images/plants/' + values['SELECTIONS']['selected'] + '.jpg') %}
+                          <div class="property-img animate-img" style="text-align:center;"> 
+                              <img src="{{ url_for('static', filename=pic) }}" class="img-fluid" alt="{{values['SELECTIONS']['selected']}}" style="width:60%;"> 
+                              <br><br>
+                              
+                              <br><br>
+                          </div>
+                        {% endif %}
+                      <!-- Location -->
+                        <div class="col-12">
+                          <div class="form-group">
+
+                            <label class="text-theme fs-16 fw-600">Location</label>
+                            {% if values['SELECTIONS']['time_to_plant'] == "" %}
+                            <input type="text" name="location" class="form-control form-control-custom" value="{{ values['DEFAULTS']['location']['postal'] }}">                           
+                            {% else %}                                  
+                            <input type="text" name="location" class="form-control form-control-custom" value="{{ values['SELECTIONS']['location']['postal'] }}"> 
+                            {% endif %}
+                          </div>
+                        </div>
+                        <!-- Location End -->
+                        <!-- Calendar Time -->
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label class="text-theme fs-16 fw-600">Time to Plant</label>
+                            <input type = "text" name="time_to_plant" id = "datepicker" class="form-control form-control-custom" value="{{ values['SELECTIONS']['time_to_plant']['date'] }}">                            
+                          </div>
+                        </div>
+                        <!-- Calendar Time End -->
+                    </div>     
+                  <div class="more-filter">
+                    <button class="p-relative btn-first btn-submit full-width" data-toggle="collapse" data-target="#morefilter" type="button">More Search options</button>
+                    <div class="collapse" id="morefilter">                                     
+                        <div class="row">  
+                          <!-- Attracts -->   
+                            <div class="col-12">
+                              <label class="text-theme fs-16 fw-600">Attractions : </label>
+                              <div class="form-group mb-0">                              
+                                {% for k,v in values['DEFAULTS']['attractions'].items() %}
+                                <label class="custom-checkbox">
+                                  {% if k in values['SELECTIONS']['attractions'] %}
+                                  <input type="checkbox" name="attractions_{{k}}" checked>
+                                  {% else %}                                  
+                                  <input type="checkbox" name="attractions_{{k}}">
+                                  {% endif %}
+                                  <span class="checkmark"></span>{{ v }}</label>
+                                {% endfor %}
+                              </div>
+                            </div>
+                          <!-- Attracts End -->
+                          <!-- Fruit -->   
+                            <div class="col-12">
+                              <label class="text-theme fs-16 fw-600">Fruit : </label>
+                              <div class="form-group mb-0">                              
+                                {% for k,v in values['DEFAULTS']['fruit'].items() %}
+                                <label class="custom-checkbox">
+                                  {% if k in values['SELECTIONS']['fruit'] %}
+                                  <input type="checkbox" name="fruit_{{k}}" checked>
+                                  {% else %}                                  
+                                  <input type="checkbox" name="fruit_{{k}}">
+                                  {% endif %}
+                                  <span class="checkmark"></span>{{ v }}</label>
+                                {% endfor %}
+                              </div>
+                            </div>
+                          <!-- Fruit End -->
+                          <!-- Water -->                          
+                            <div class="col-12">
+                              <div class="form-group">
+                              <label class="text-theme fs-16 fw-600">Watering Needs : </label>
+                              <select name="water" class="form-control form-control-custom custom-select">
+                                {% for k,v in values['DEFAULTS']['water'].items()  %}
+                                  {% if k in values['SELECTIONS']['water'] %}
+                                    <option value="{{ k }}" selected>{{ v }}</option>
+                                  {% else %}                                  
+                                    <option value="{{ k }}">{{ v }}</option>
+                                  {% endif %}
+                                {% endfor %}
+                              </select>
+                              </div>                          
+                            </div>
+                          <!-- Water End -->
+                          <!-- Height -->
+                          <div class="col-12">
+                            <div class="form-group">
+                                <label class="text-theme fs-16 fw-600">Height :</label>
+                                <div class="sidebar_widgets mb-xl-30">                      
+                                  <div class="property-filter">
+                                      <div class="range-slider">
+                                          <input name="height-min" type="text" id="height-min" readonly>
+                                          <input name="height-max" type="text" id="height-max" readonly>
+                                      </div>
+                                      <div id="slider-range-height"></div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        <!-- Height End -->
+                        <!-- Width -->
+                          <div class="col-12">
+                            <div class="form-group">
+                                <label class="text-theme fs-16 fw-600">Width :</label>
+                                <div class="sidebar_widgets mb-xl-30">                      
+                                  <div class="property-filter">
+                                     <div class="range-slider">
+                                      <input name="width-min" type="text" id="width-min" readonly>
+                                      <input name="width-max" type="text" id="width-max" readonly>
+                                     </div>
+                                    <div id="slider-range-width"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Width End -->
+                        <!-- Temperature -->    
+                          <div class="col-12">
+                            <div class="form-group">
+                                <label class="text-theme fs-16 fw-600">Temperature : </label>
+                                <div class="sidebar_widgets mb-xl-30">                      
+                                  <div class="property-filter">
+                                    <div class="range-slider">
+                                      <input name="temp-min" type="text" id="temp-min" readonly>
+                                      <input name="temp-max" type="text" id="temp-max" readonly>
+                                    </div>
+                                    <div id="slider-range-temp"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Temperature End -->
+                        <!-- Sun -->    
+                          <div class="col-12">
+                            <label class="text-theme fs-16 fw-600">Sun : </label>
+                            <div class="form-group mb-0">                              
+                              {% for k,v  in values['DEFAULTS']['sun'].items() %}
+                              <label class="custom-checkbox">
+                                {% if k in values['SELECTIONS']['sun'] %}
+                                <input type="checkbox" name="sun_{{k}}" checked>
+                                {% else %}                                  
+                                <input type="checkbox" name="sun_{{k}}">
+                                {% endif %}
+                                <span class="checkmark"></span>{{ v }}</label>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        <!-- Sun End -->          
+                          <!-- Flowering -->    
+                            <div class="col-12">
+                        <!-- Types -->                 
+                          <label class="text-theme fs-16 fw-600">Types : </label>
+                              <div class="form-group mb-0">
+                                <label class="custom-checkbox">
+                                  {% if 'max' in values['SELECTIONS']['flowering'] %}
+                                  <input type="checkbox" name="flowering" checked="checked">                                  
+                                  {% else %}                                 
+                                  <input type="checkbox" name="flowering">    
+                                  {% endif %}
+                                  <span class="checkmark"></span>Flowering</label>
+                              </div>
+                            </div>
+                          <!-- Flowering End -->
+                          <!-- Smell -->    
+                            <div class="col-12">
+                              <div class="form-group mb-0">
+                                <label class="custom-checkbox">
+                                  {% if 'max' in values['SELECTIONS']['smell'] %}
+                                  <input type="checkbox" name="smell" checked="checked">                                  
+                                  {% else %}                                 
+                                  <input type="checkbox" name="smell">    
+                                  {% endif %}
+                                  <span class="checkmark"></span>Smell</label>
+                              </div>
+                            </div>
+                          <!-- Smell End -->
+                          <!-- Vegetable -->    
+                            <div class="col-12">
+                              <div class="form-group mb-0">
+                                <label class="custom-checkbox">
+                                  {% if 'max' in values['SELECTIONS']['vegetable'] %}
+                                  <input type="checkbox" name="vegetable" checked="checked">                                  
+                                  {% else %}                                 
+                                  <input type="checkbox" name="vegetable">    
+                                  {% endif %}
+                                  <span class="checkmark"></span>Vegetable</label>
+                              </div>
+                            </div>
+                          <!-- Vegetable End -->
+                          <!-- Herb -->    
+                            <div class="col-12">
+                              <div class="form-group mb-0">
+                                <label class="custom-checkbox">
+                                  {% if 'max' in values['SELECTIONS']['herb'] %}
+                                  <input type="checkbox" name="herb" checked="checked">                                  
+                                  {% else %}                                 
+                                  <input type="checkbox" name="herb">    
+                                  {% endif %}
+                                  <span class="checkmark"></span>Herb</label>
+                              </div>
+                            </div>
+                            <!-- Herb End -->    
+                        <!-- Types End -->                        
+                        <!-- Zones -->                          
+                        <div class="col-12">
+                          <div class="form-group mb-0">
+                          <label class="text-theme fs-16 fw-600">Zones : </label>
+                          <select name="zones" class="form-control form-control-custom custom-select">
+                            <option disabled>Select planting zone</option>
+                            {% for k,v in values['DEFAULTS']['zones'].items() %}
+                              {% if k in values['SELECTIONS']['zones'] %}
+                                <option value="{{k}}" selected>{{v}}</option>
+                              {% else %}                                  
+                                <option value="{{k}}">{{v}}</option>
+                              {% endif %}
+                            {% endfor %}
+                          </select>
+                          </div>                          
+                        </div>
+                        </div>
+                    </div>
+                  </div>      
+                </div>
+              </div>
+              
+        <div class="col-12" style="text-align:center;">
+          <button type="submit" name= "btn_filters_update" class="btn-first btn-submit full-width mt-3">Update</button>
+        <nav class="section-padding-top">
+            </div>
+          </div>
+        </aside>
+    <!-- FILTERS -->
+
+    <!-- RECOMMENDATIONS -->  
+    <div class="col-lg-8">
+      <div class="row">
+       
+    {% set recomendations = values['RECOMMENDATIONS'] %}
+    {% for k,v in recomendations['body'].items() %}
+      {% set pic = ('assets/images/plants/' + v['idx'] + '.jpg') %}
+      {% if loop.first %}
+            <div class="col-lg-12">          
+              <div class="listing-top-heading mb-xl-20">
+                <h6 class="no-margin text-theme">Showing {{ recomendations['head']['count'] }} Results</h6>
+                <div class="sort-by"> <span class="text-custom-black fs-14 fw-600">Sort by</span>
+                  <select class="form-control form-control-custom custom-select">
+                    <option>Relevance</option>
+                    <option>A to Z</option>
+                    <option>Z to A</option>
+                  </select>
+                </div>
+              </div>
+            </div>            
+        {% endif %}
+            <div class="col-sm-4">
+              <div class="property-grid-box mb-xl-20">
+                <div class="property-grid-wrapper">
+                  <div class="property-img animate-img"> 
+                    <a href="#"> 
+                      <img src="{{ url_for('static', filename=pic) }}" class="img-fluid" alt="#"> 
+                  </a>
+                  <div class="property-type">
+                    {% if v['native_region'] != '' %}<!-- Invasive species flag -->
+                    <a href="#" class="property-tag-2 bg-custom-blue text-custom-white" style="background-color: darkred !important; color:white">*</a> 
+                    {% endif %}
+                  </div>
+                  <div class="property-address bg-custom-blue">
+                    <a href="#"><i class="flaticon-pin">{{ v['genus'] }}</i></a>
+                  </div>
+                    <div class="property-save-btn transform-center">
+                      <ul class="custom">
+                        <li class="custom-tooltip" data-tip="Add to Cart">
+                          <label class="action-tools">
+                            <input name="{{k}}{{'_cart'}}" type="checkbox">
+                            <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-cart0.png') }}"> 
+                            <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-cart0.png') }}"> 
+                            <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-cart1.png') }}"> 
+                          </label>
+                        </li>
+                        <li class="custom-tooltip" data-tip="Thumbs-Up">
+                          <label class="action-tools">
+                            <input name="{{k}}{{'_up'}}" type="checkbox">
+                            <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup0.png') }}" alt="thumbs up?"> 
+                            <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup0.png') }}" alt="thumbs up?"> 
+                            <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbup1.png') }}" alt="thumbs up"> 
+                          </label>
+                        </li>
+                        <li class="custom-tooltip" data-tip="Thumbs-Down">
+                          <label class="action-tools">
+                            <input name="{{k}}{{'_down'}}" type="checkbox">
+                            <img class="img-unchecked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown0.png') }}" alt="thumbs down?"> 
+                            <img class="img-hover" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown0.png') }}" alt="thumbs down?"> 
+                            <img class="img-checked" src="{{ url_for('static', filename='assets/images/icons/icon-thumbdown1.png') }}" alt="thumbs down"> 
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="property-grid-caption padding-20">
+                    <h5><a href="#" class="text-theme">{{ v['common'] }}</a></h5>  
+                    <p class="text-theme"> similarity : {{ v['cosine'] }}</p>                  
+                    {% if v['native_region'] != '' %}                    
+                      <p><i><a href="#" class="text-theme invasive_species">Possible invasive species</a></i></p>
+                    {% else %}
+                      <p style="color: #fff;"><i>Test</i></p>
+                    {% endif %}
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>      
+      {% endfor %} 
+      <div class="row">
+          <ul class="custom pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+      </div>
+    {% else %}
+    <p class="text-custom">
+      Traditionally, recommendation engines need a lot of data from community members that are aggregated with your specific data to learn from. 
+      This allows the engine to make accurate recommendations of similarity to items of interest.  
+      <br><br>
+      The “Green Thumb” AI recommendation engine fills the missing data gap, called the “cold start” problem, by surveying some plants we have in the database. 
+      Upon your selections, we summarize and aggregate the variables for each plant in the category of your sentiment for “add to cart,” “thumbs up” or “thumbs down”. 
+      For “add to cart” we add 2 points, and for “thumbs up” we add 1 point, and lastly for “thumbs down” we subtract 1 point. 
+      <br><br>      
+    </p>
+    <div class="cta-btn">
+      <div class="p-relative btn-first btn-submit full-width"> <a href="{{ url_for('survey.ui') }}" class="addlisting-btn btn-first" style="color:#fff;">Click Here To Try Our Survey</a> </div>
+    </div>
+    {% endif %}    
+    </div>   
+      </div>
+      </div>
+    </nav>
+  </form>
+</div>
+</div>
+      
+  </div>  
+    </section>
+
+    <!-- END RECOMMENDATIONS -->
+<!-- End Results --> 
+
+<!-- Start Footer -->
+<footer class="bg-custom-black section-padding footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-md-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Useful Links</h4>
+                  </div>
+                  <ul class="custom links">
+                    <li> <a href="{{ url_for('about') }}" class="text-custom-white">About Us</a> </li>
+                    <li> <a href="{{ url_for('recommendations.ui') }}" class="text-custom-white">Recommendations</a> </li>
+                    <li> <a href="{{ url_for('privacy') }}" class="text-custom-white">Privacy</a> </li>
+                    <li> <a href="{{ url_for('cart.ui') }}" class="text-custom-white">Cart</a> </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-md-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Featured Post</h4>
+                  </div>
+                  <ul class="custom popular_post">
+                      <li>
+                          <div class="post">
+                              <div class="post-wrapper">
+                                  <div class="popular_post_img animate-img">
+                                      <a href="blog-single.html">
+                                          <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-1-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                      </a>
+                                  </div>
+                                  <div class="popular_post_title">
+                                      <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">8 Tips to Help You Finding New Home</a></h6>
+                                      <div class="post-date">
+                                          <p class="text-custom-white no-margin">12 Dec 2022</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="post">
+                              <div class="post-wrapper">
+                                  <div class="popular_post_img animate-img">
+                                      <a href="blog-single.html">
+                                          <img src="{{ url_for('static', filename='assets/images/homepage-1/featured-post-2-80x80.jpg') }}" class="img-fluid image-fit" alt="#">
+                                      </a>
+                                  </div>
+                                  <div class="popular_post_title">
+                                      <h6><a href="blog-single.html" class="text-custom-white fs-14 fw-400">Bedroom Colors You'll Never Regret</a></h6>
+                                      <div class="post-date">
+                                          <p class="text-custom-white no-margin">09 Dec 2022</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box mb-xs-80">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">Insta Feeds</h4>
+                  </div>
+                  <ul class="custom insta-feed">
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-1-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-2-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-3-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-4-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-5-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                      <li class="insta-item animate-img">
+                          <a href="#">
+                              <img src="{{ url_for('static', filename='assets/images/homepage-1/insta-6-80x80.jpg') }}" class="img-fluid full-width" alt="insta">
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+              <div class="footer-box">
+                  <div class="footer-heading">
+                      <h4 class="text-custom-white no-margin">News Letter</h4>
+                  </div>
+                  <div class="newsletter">
+                      <!--form-->
+                          <div class="form-group">
+                              <input type="email" class="form-control form-control-custom" placeholder="Email Id">
+                          </div>
+                          <button class="btn-first btn-submit btn-height" type="submit">Subscribe</button>
+                      <!--/form-->
+                  </div>
+                  <div class="social-media">
+                      <ul class="custom social-media">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<div class="copyright">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="payment-logo mb-md-20">
+                  <span class="text-custom-white fs-14 mr-3">We are accept</span>
+                  <div class="payemt-icon">
+                      <img src="{{ url_for('static', filename='assets/images/card01.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card02.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card03.png') }}" alt="#">
+                      <img src="{{ url_for('static', filename='assets/images/card04.png') }}" alt="#">
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+            <p class="text-custom-white no-margin">© GreenThumbAI 2022 | All Right Reserved.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Footer -->
+<div id="back-top" class="back-top"> <a href="#top"><i class="flaticon-arrows"></i></a> </div>
+<!-- Place all Scripts Here --> 
+<!--
+
+    -->
+<script>
+  //$.ajax({ 
+	//	url: "/recommendations/filters/data" 
+	//}).done(function(res) { 
+	//	_min = (res.height.min); 
+	//});
+  var height_min = '{{ values["DEFAULTS"]["height"]["min"] }}'
+  var height_max = '{{ values["DEFAULTS"]["height"]["max"] }}'
+  var height_smin = '{{ values["SELECTIONS"]["height"]["min"] }}'
+  var height_smax = '{{ values["SELECTIONS"]["height"]["max"] }}'
+  var width_min = '{{ values["DEFAULTS"]["width"]["min"] }}'
+  var width_max = '{{ values["DEFAULTS"]["width"]["max"] }}'
+  var width_smin = '{{ values["SELECTIONS"]["width"]["min"] }}'
+  var width_smax = '{{ values["SELECTIONS"]["width"]["max"] }}'
+  var temp_min = '{{ values["DEFAULTS"]["temperature"]["min"] }}'
+  var temp_max = '{{ values["DEFAULTS"]["temperature"]["max"] }}'
+  var temp_smin = '{{ values["SELECTIONS"]["temperature"]["min"] }}'
+  var temp_smax = '{{ values["SELECTIONS"]["temperature"]["max"] }}'
+</script> 
+
+<!-- jQuery --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script> 
+<!-- Popper --> 
+<script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script> 
+<!-- Bootstrap --> 
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script> 
+<!-- Range Slider --> 
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.js') }}"></script> 
+<!-- Swiper Slider --> 
+<script src="{{ url_for('static', filename='assets/js/swiper.min.js') }}"></script> 
+<!-- Slick Slider --> 
+<script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script> 
+<!-- Nice Select --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.nice-select.js') }}"></script> 
+<!-- Jarallex --> 
+<script src="{{ url_for('static', filename='assets/js/jarallax.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='assets/js/jarallax-video.min.js') }}"></script> 
+<!-- magnific popup --> 
+<script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script> 
+<!-- Maps --> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script> 
+<!-- info box --> 
+<script src="{{ url_for('static', filename='assets/js/infobox.min.js') }}"></script> 
+<!-- Markerclusterer js --> 
+<script src="{{ url_for('static', filename='assets/js/markerclusterer.js') }}"></script> 
+<!-- Maps js --> 
+<script src="{{ url_for('static', filename='assets/js/custom-maps.js') }}"></script> 
+<!-- Custom Js --> 
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script> 
+
+
+<script>
+  $(function() {
+  $( "#datepicker" ).datepicker();  
+
+  });
+</script>
+
+<script>
+  document.getElementsByName('time_to_plant')[0].value = `{{ values['SELECTIONS']['time_to_plant']['date']  }}`
+</script>
+
+<!-- /Place all Scripts Here -->
+</body>
+</html>
