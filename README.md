@@ -1,4 +1,5 @@
 # Green Thumb AI
+![Green Thumb AI](logo.png)
 
 Team: Kasha Muzila, Karl Eirich, Robert Turnage
 
